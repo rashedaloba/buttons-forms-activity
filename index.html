@@ -68,6 +68,30 @@
         <option value="bsit">BSIT-3A</option>
         <option value="other">Other (Type your own)...</option> 
     </select><br><br>
+       <div id="customSectionWrapper" style="display: none;">
+  <label for="customSection">Type your section:</label><br>
+  <input type="text" id="customSection" name="custom_section" placeholder="e.g., BSIT-4B">
+  <br><br>
+</div>
+
+<script>
+  function toggleCustomInput() {
+    const selectElement = document.getElementById("ssection");
+    const customInputWrapper = document.getElementById("customSectionWrapper");
+    const customInput = document.getElementById("customSection");
+
+    if (selectElement.value === "other") {
+      // Show the input text field and make it required
+      customInputWrapper.style.display = "block";
+      customInput.required = true;
+    } else {
+      // Hide the input text field and clear it
+      customInputWrapper.style.display = "none";
+      customInput.required = false;
+      customInput.value = ""; 
+    }
+  }
+</script>
        
     <label for="message">Comments:</label><br>
     <textarea id="message" name="message" rows="5" cols="40" placeholder="Enter your comments"></textarea><br><br>
