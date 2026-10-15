@@ -8,60 +8,65 @@
     <h1>Student Registration Form</h1>
 
    <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
-   
+
+    <!-- Your Web3Forms Access Key -->
     <input type="hidden" name="access_key" value="30d09946-b612-4be1-8a57-1a7d88b37a2f">
-    
-        <label for="fullname">Full Name:</label><br>
-        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required><br><br>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" placeholder="example@email.com" required><br><br>
+    <!-- REQUIRED: Hidden Botcheck field to pass security validation -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
+    <!-- Rest of your fields -->
+    <label for="fullname">Full Name:</label><br>
+    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required><br><br>
 
-        <label for="age">Age:</label><br>
-        <input type="number" id="age" name="age" min="1" max="100"><br><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="example@email.com" required><br><br>
 
-        <label for="birthdate">Birth Date:</label><br>
-        <input type="date" id="birthdate" name="birthdate"><br><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
 
-        <fieldset>
-            <legend>Gender</legend>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label><br>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label>
-        </fieldset><br>
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age" min="1" max="100"><br><br>
 
-        <fieldset>
-            <legend>Hobbies</legend>
-            <input type="checkbox" id="reading" name="hobby[]" value="reading">
-            <label for="reading">Reading</label><br>
-            <input type="checkbox" id="music" name="hobby[]" value="music">
-            <label for="music">Music</label><br>
-            <input type="checkbox" id="sports" name="hobby[]" value="sports">
-            <label for="sports">Sports</label>
-        </fieldset><br>
+    <label for="birthdate">Birth Date:</label><br>
+    <input type="date" id="birthdate" name="birthdate"><br><br>
 
-        <label for="ccourse">Course:</label><br>
-        <select id="ccourse" name="course">
-            <option value="">-- Select Course --</option>
-            <option value="bsit">BS Information Technology</option>
-            <option value="bscs">BS Computer Science</option>
-            <option value="bsemc">BS Entertainment and Multimedia Computing</option>
-        </select><br><br>
+    <fieldset>
+        <legend>Gender</legend>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+    </fieldset><br>
 
-        <label for="message">Comments:</label><br>
-        <textarea id="message" name="message" rows="5" cols="40" placeholder="Enter your comments"></textarea><br><br>
+    <fieldset>
+        <legend>Hobbies</legend>
+        <input type="checkbox" id="reading" name="hobby[]" value="reading">
+        <label for="reading">Reading</label><br>
+        <input type="checkbox" id="music" name="hobby[]" value="music">
+        <label for="music">Music</label><br>
+        <input type="checkbox" id="sports" name="hobby[]" value="sports">
+        <label for="sports">Sports</label>
+    </fieldset><br>
 
-        <label for="profile">Profile Picture:</label><br>
-        <input type="file" id="profile" name="profile"><br><br>
+    <label for="ccourse">Course:</label><br>
+    <select id="ccourse" name="course">
+        <option value="">-- Select Course --</option>
+        <option value="bsit">BS Information Technology</option>
+        <option value="bscs">BS Computer Science</option>
+        <option value="bsemc">BS Entertainment and Multimedia Computing</option>
+    </select><br><br>
 
-        <button type="submit">Register</button>
-        <button type="reset">Clear</button>
+    <label for="message">Comments:</label><br>
+    <textarea id="message" name="message" rows="5" cols="40" placeholder="Enter your comments"></textarea><br><br>
 
-    </form>
+    <label for="profile">Profile Picture:</label><br>
+    <input type="file" id="profile" name="profile"><br><br>
 
+    <button type="submit">Register</button>
+    <button type="reset">Clear</button>
+
+</form>
+         
 </body>
 </html>
