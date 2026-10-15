@@ -7,7 +7,8 @@
 
     <h1>Student Registration Form</h1>
 
-    <form action="https://formspree.io/f/mbgdqddl" method="POST" enctype="multipart/form-data">
+    <!-- Replace YOUR_FORM_ID with your actual Formspree endpoint ID -->
+    <form action="https://https://formspree.io/f/mbgdqddl" method="POST" enctype="multipart/form-data">
 
         <label for="fullname">Full Name:</label><br>
         <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required><br><br>
@@ -34,11 +35,11 @@
 
         <fieldset>
             <legend>Hobbies</legend>
-            <input type="checkbox" id="reading" name="hobby" value="reading">
+            <input type="checkbox" id="reading" name="hobby[]" value="reading">
             <label for="reading">Reading</label><br>
-            <input type="checkbox" id="music" name="hobby" value="music">
+            <input type="checkbox" id="music" name="hobby[]" value="music">
             <label for="music">Music</label><br>
-            <input type="checkbox" id="sports" name="hobby" value="sports">
+            <input type="checkbox" id="sports" name="hobby[]" value="sports">
             <label for="sports">Sports</label>
         </fieldset><br>
 
