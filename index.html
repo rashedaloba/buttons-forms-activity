@@ -9,13 +9,9 @@
 
    <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
 
-    <!-- Your Web3Forms Access Key -->
+    
     <input type="hidden" name="access_key" value="30d09946-b612-4be1-8a57-1a7d88b37a2f">
-
-    <!-- REQUIRED: Hidden Botcheck field to pass security validation -->
-    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-    <!-- Rest of your fields -->
+       
     <label for="fullname">Full Name:</label><br>
     <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required><br><br>
 
@@ -63,6 +59,10 @@
     <label for="profile">Profile Picture:</label><br>
     <input type="file" id="profile" name="profile"><br><br>
 
+       <input type="checkbox" id="myCheckbox" name="option1" value="yes">
+       
+<label for="myCheckbox">I agree to the terms</label>
+       
     <button type="submit">Register</button>
     <button type="reset">Clear</button>
 
