@@ -9,22 +9,15 @@
 
    <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
 
-    
     <input type="hidden" name="access_key" value="30d09946-b612-4be1-8a57-1a7d88b37a2f">
-   
-
-   
     <input type="hidden" name="redirect" value="https://web3forms.com/success">
-
-
     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-   
     <label for="fullname">Full Name:</label><br>
     <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required><br><br>
 
     <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" placeholder="example@email.com" required><br><br>
+    <input type="email" id="email" name="email" placeholder="Ex:rashedaloba@email.com" required><br><br>
 
     <label for="password">Password:</label><br>
     <input type="password" id="password" name="password" required><br><br>
@@ -60,38 +53,41 @@
         <option value="bscs">BS Computer Science</option>
         <option value="bsemc">BS Entertainment and Multimedia Computing</option>
     </select><br><br>
- <label for="ssection">Section:</label><br>
-    <select id="ssection" name="section">
+
+    <label for="ssection">Section:</label><br>
+   
+    <select id="ssection" name="section" onchange="toggleCustomInput()">
         <option value="">-- Select Section --</option>
-        <option value="bsit">BSIT-1A</option>
-        <option value="bsit">BSIT-2A</option>
-        <option value="bsit">BSIT-3A</option>
+        <option value="BSIT-1A">BSIT-1A</option>
+        <option value="BSIT-2A">BSIT-2A</option>
+        <option value="BSIT-3A">BSIT-3A</option>
         <option value="other">Other (Type your own)...</option> 
     </select><br><br>
-       <div id="customSectionWrapper" style="display: none;">
-  <label for="customSection">Type your section:</label><br>
-  <input type="text" id="customSection" name="custom_section" placeholder="e.g., BSIT-4B">
-  <br><br>
-</div>
 
-<script>
-  function toggleCustomInput() {
-    const selectElement = document.getElementById("ssection");
-    const customInputWrapper = document.getElementById("customSectionWrapper");
-    const customInput = document.getElementById("customSection");
+    <div id="customSectionWrapper" style="display: none;">
+        <label for="customSection">Type your section:</label><br>
+        <input type="text" id="customSection" name="custom_section" placeholder="e.g., BSIT-4B">
+        <br><br>
+    </div>
 
-    if (selectElement.value === "other") {
-      // Show the input text field and make it required
-      customInputWrapper.style.display = "block";
-      customInput.required = true;
-    } else {
-      // Hide the input text field and clear it
-      customInputWrapper.style.display = "none";
-      customInput.required = false;
-      customInput.value = ""; 
-    }
-  }
-</script>
+    <script>
+      function toggleCustomInput() {
+        const selectElement = document.getElementById("ssection");
+        const customInputWrapper = document.getElementById("customSectionWrapper");
+        const customInput = document.getElementById("customSection");
+
+        if (selectElement.value === "other") {
+          
+          customInputWrapper.style.display = "block";
+          customInput.required = true;
+        } else {
+          
+          customInputWrapper.style.display = "none";
+          customInput.required = false;
+          customInput.value = ""; 
+        }
+      }
+    </script>
        
     <label for="message">Comments:</label><br>
     <textarea id="message" name="message" rows="5" cols="40" placeholder="Enter your comments"></textarea><br><br>
